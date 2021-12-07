@@ -12,17 +12,21 @@ class CardPages extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.all(10.0),
         children: [
-          _CardTipo1(),
+          _cardTipo1(),
          const SizedBox(height: 30.0),
-          _CardTipo2(),
+          _cardTipo2(),
           const SizedBox(height: 30.0),
-            _CardTipo1(),
+            _cardTipo1(),
+             const SizedBox(height: 30.0),
+          _cardTipo2(),
+           const SizedBox(height: 30.0),
+          _cardTipo1(),
         ],
       ),
     );
   }
 
-  _CardTipo1() {
+  _cardTipo1() {
     return Card(
       elevation: 10.0,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
@@ -53,8 +57,9 @@ class CardPages extends StatelessWidget {
   }
 }
 
-_CardTipo2() {
-  return Card(
+_cardTipo2() {
+  final card= Container(
+
     child: Column(
       children: [
        const FadeInImage(
@@ -71,6 +76,26 @@ _CardTipo2() {
         )
       ],
       // Image.network('https://img.ecartelera.com/noticias/fotos/66100/66155/1.jpg'),
+    ),
+  );
+
+  return Container(
+   
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(30.0),
+      color: Colors.white,
+      boxShadow: const <BoxShadow>[
+        BoxShadow(
+          color: Colors.black26,
+          blurRadius: 10.0,
+          spreadRadius: 2.0,
+          offset: Offset(2.0, 10.0)
+        )
+      ]
+    ),
+    child: ClipRRect(
+      borderRadius: BorderRadius.circular(30.0),
+      child: card,
     ),
   );
 }

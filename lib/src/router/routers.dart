@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:prueba/src/pages/alert_pages.dart';
+import 'package:prueba/src/pages/animated_container.dart';
 import 'package:prueba/src/pages/avatar_pages.dart';
 import 'package:prueba/src/pages/card_pages.dart';
 import 'package:prueba/src/pages/home_pages.dart';
+import 'package:prueba/src/pages/inputs_pages.dart';
 
 Map<String, WidgetBuilder> getRoutes() {
   return {
@@ -10,5 +12,7 @@ Map<String, WidgetBuilder> getRoutes() {
     'alert' : (context) => AlertsPages(),
     'avatar': (context) => AvatarPages(),
     'card'  : (context) => CardPages(),
+    'animaciones': (context) => AnimatedContainerPages(),
+    'inputs': (context) => InputsPages(),
   };
 }
