@@ -3,11 +3,13 @@ import 'package:prueba/src/providers/menu_provider.dart';
 import 'package:prueba/src/utils/icono_string_utils.dart';
 
 class HomePages extends StatelessWidget {
+  const HomePages({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Componentes Flutter'),
+          title: const Text('Componentes Flutter'),
         ),
         body: _Lista());
   }
@@ -33,13 +35,13 @@ class HomePages extends StatelessWidget {
       final widgetTemp = ListTile(
         title: Text(opt['texto']),
         leading: getIcon(opt['icon']),  
-        trailing: Icon(Icons.keyboard_arrow_right, color: Colors.blue),
+        trailing: const Icon(Icons.keyboard_arrow_right, color: Colors.blue),
         onTap: () {
           Navigator.pushNamed(context, opt['ruta']);
         },
         
       );
-      opciones..add(widgetTemp)..add(Divider());
+      opciones..add(widgetTemp)..add(const Divider());
     });
    
    return opciones;
