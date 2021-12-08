@@ -28,8 +28,13 @@
         },
         {
             "ruta" : "slider",
+            "icon" : "slider",
+            "texto": "Slider"
+        },
+        {
+            "ruta" : "list",
             "icon" : "list",
-            "texto": "Listas"
+            "texto": "List"
         }
     ]
 }
